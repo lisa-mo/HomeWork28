@@ -12,6 +12,10 @@ hs_err_pid*
 *.iws
 *.xml
 
+#Allure
+.allure/allure-2.10.0/
+allure-results/
+
 # Maven
 log/
 target/

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Citrus" configfailurepolicy="continue" >
+    <test name="Citrus Test">
+        <classes>
+            <class name="uiTesting.citrus.CitrusBasketTest">
+            </class>
+        </classes>
+    </test>
+</suite>

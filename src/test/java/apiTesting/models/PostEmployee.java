@@ -3,11 +3,11 @@ package apiTesting.models;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PostEmployee {
-//    @JsonProperty("name")
+   @JsonProperty("name")
     String name;
-//    @JsonProperty("salary")
+   @JsonProperty("salary")
     String salary;
-//    @JsonProperty("age")
+   @JsonProperty("age")
     String age;
 
     public PostEmployee(String name, String salary, String age) {

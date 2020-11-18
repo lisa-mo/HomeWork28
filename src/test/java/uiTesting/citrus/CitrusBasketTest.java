@@ -56,22 +56,24 @@ public class CitrusBasketTest {
         productListPageStep.clickOnProduct(productName);
         String productPrice = productPageStep.addProductToBasket();
         productPageStep.verifyBasketContent(productName, productPrice);
-//        productPage.getBasketFragment().deleteProdFromBasket()
-//                .closeBasket();
+       productPage.getBasketFragment().deleteProdFromBasket()
+               .closeBasket();
     }
 
     @Test
     public void addProdViaSearchToBasket() {
+            refresh();
         homePageStep.searchForProductByName(productName);
         String productPrice = productListPageStep.getProDuctPriceByItsName(productName);
         productListPageStep.addProdToBasketByName(productName);
         productPageStep.verifyBasketContent(productName, productPrice);
-//        productPage.getBasketFragment().deleteProdFromBasket()
-//                .closeBasket();
+       productPage.getBasketFragment().deleteProdFromBasket()
+               .closeBasket();
     }
 
     @Test
     public void addTwoProdToBasketViaSearch() {
+            refresh();
         homePageStep.searchProductByBrand(brandForSearch);
         String strFirstProductPrice = productListPageStep.getProdPriceByOrder(0);
         String strSecondProductPrice = productListPageStep.getProdPriceByOrder(1);
@@ -79,12 +81,13 @@ public class CitrusBasketTest {
         String secondProductName = productListPageStep.getProdNameByOrder(1);
         productListPageStep.addProductsToBasket();
         productListPageStep.checkProductsInBasket(firstProductName, secondProductName, strFirstProductPrice, strSecondProductPrice);
-//        productListPage.getBasketFragment().deleteProdFromBasket()
-//                .closeBasket();
+       productListPage.getBasketFragment().deleteProdFromBasket()
+               .closeBasket();
     }
 
     @Test
     public void addTwoProdToBasketViaCompare() {
+            refresh();
         homePageStep.searchProductByBrand(brandForSearch);
         String strFirstProductPrice = productListPageStep.getProdPriceByOrder(0);
         String strSecondProductPrice = productListPageStep.getProdPriceByOrder(1);
@@ -93,7 +96,7 @@ public class CitrusBasketTest {
         productListPageStep.addProdsToCompare();
         comparePageStep.addProdsToBasketFromCompare();
         productListPageStep.checkProductsInBasket(firstProductName, secondProductName, strFirstProductPrice, strSecondProductPrice);
-//        productListPage.getBasketFragment().deleteProdFromBasket()
-//                .closeBasket();
+       productListPage.getBasketFragment().deleteProdFromBasket()
+               .closeBasket();
     }
 }
